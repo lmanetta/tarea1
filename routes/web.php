@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\MenuController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +16,11 @@ use App\Http\Controllers\UserController;
 
 
 
-Route::get('/', [UserController::class, 'inicio' ]);
+Route::get('/', [MenuController::class, 'inicio' ]);
 // ->name('inicio');
-Route::get('/calendario', [UserController::class, 'calendario' ])->name('calendario');;
+Route::get('/calendario', [MenuController::class, 'calendario' ])->name('calendario');;
 
-Route::get('/carreras', [UserController::class, 'carreras'])->name('carreras');
+Route::get('/carreras', [MenuController::class, 'carreras'])->name('carreras');
 
 
-Route::get('/carrera/{carrera}', [UserController::class, 'carrera' ])->name('carrera');
+Route::get('/carrera/{carrera}', [MenuController::class, 'carrera' ])->name('carrera');
